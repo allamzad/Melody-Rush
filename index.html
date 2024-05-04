@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+    Author: Allam Amzad
+    CS 132 Spring 2024
+    Email: aamzad@caltech.edu
+    Date: 4/28/2024
+
+    This index.html is designed for the Melody Rush game to construct
+    the elements forming the game. This includes the menu, the game board,
+    the HUD, popups, and the footer. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--
+    Font source: Google Fonts, Author: Matt McInerney
+    [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)]
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="melody.js"></script>
+    <title>Melody Rush</title>
+</head>
+<body>
+    <main>
+        <section id="menu-view">
+            <header><h1>Melody Rush &sung;</h1></header>
+            <section>
+                <button id="start-btn">Start Game</button>
+                <button id="mute-btn" class="muted">Toggle Sound</button>
+                <select name="difficulty">
+                    <option value="choose-difficulty">Choose a Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="impossible">Impossible</option>
+                </select>
+            </section>
+            <section id="instructions">
+                <p>
+                    Melody Rush is a game where the player must press each key 
+                    on the screen when it is touching the blue bar at the right 
+                    of the screen. Keys must be pressed <strong>in order</strong> 
+                    of their appearance.
+                </p>
+            </section>
+        </section>
+        <section id="difficulty-section" class="hidden">
+            <div id="difficulty-warning">
+                <p>Please select a difficulty.</p>
+                <button id="difficulty-warn-btn">Close warning.</button>
+            </div>
+        </section>
+        <section id="game-view" class="hidden">
+            <header>
+                <button class="back-btn">Back to Menu</button>
+                <h1>Melody Rush &sung;</h1>
+                <h2 id="score">Score: 0</h2>
+                <h2 id="lives">Life: 20</h2>
+                <h2 id="combo">Combo: 0x</h2>
+            </header>
+            <section id="game-board">
+                <div id="up-key-row"></div>
+                <div id="down-key-row"></div>
+                <div id="left-key-row"></div>
+                <div id="right-key-row"></div>
+                <div id="music-bar"></div>
+                <div id="sounds"></div>
+            </section>
+        </section>
+        <section id="lose-section" class="hidden">
+            <div id="lose-popup">
+                <p>You Lose.</p>
+                <!--
+                Image source: DeviantArt, Author: LoveSumer
+                [CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)]
+                -->
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51fee510-0251-453b-901d-29a40115fb9e/d37rlpk-10905fc6-99a9-436e-bbd5-7d4570149b57.jpg/v1/fit/w_519,h_684,q_70,strp/watching_the_rain____by_lovesumer_d37rlpk-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Njg0IiwicGF0aCI6IlwvZlwvNTFmZWU1MTAtMDI1MS00NTNiLTkwMWQtMjlhNDAxMTVmYjllXC9kMzdybHBrLTEwOTA1ZmM2LTk5YTktNDM2ZS1iYmQ1LTdkNDU3MDE0OWI1Ny5qcGciLCJ3aWR0aCI6Ijw9NTE5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Mdb-Oo6Os_U_Aywkk_iwac48remxesruonyD3Ebt8YY" alt="Sad cat looking outside at the rain in black and white" >
+                <button class="back-btn">Back to Menu</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Designed by Allam Amzad</p>
+        <p>Citations:</p>
+        <a href="https://www.w3schools.com/howto/howto_js_animate.asp" title="JS Animation">“How to - Javascript HTML Animations.” How To JS Animate, W3 Schools, www.w3schools.com/howto/howto_js_animate.asp. Accessed 2 May 2024. </a>
+        <a href="https://www.deviantart.com/lovesumer/art/Watching-the-rain-194443688" title="Watching the rain...">LoveSumer. “Watching the Rain... by Lovesumer on DeviantArt.” By LoveSumer on DeviantArt, www.deviantart.com/lovesumer/art/Watching-the-rain-194443688. Accessed 2 May 2024. </a>
+        <a href="https://fonts.google.com/specimen/Orbitron/about" title="Orbitron font">McInerney, Matt. “Orbitron.” Google Fonts, Google, fonts.google.com/specimen/Orbitron/about. Accessed 2 May 2024. </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect" title="getBoundingClientRec">MozDevNet. “Element: Getboundingclientrect() Method - Web Apis: MDN.” MDN Web Docs, Mozilla, developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect. Accessed 2 May 2024. </a>
+        <!-- These citations for the key images were specifically requested to be formatted as follows: -->
+        <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Google - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Google - Flaticon</a>
+    </footer>
+</body>
+</html>

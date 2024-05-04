@@ -1,0 +1,187 @@
+/*
+    Name: Allam Amzad
+    CS 132 Spring 2024
+    Email: aamzad@caltech.edu
+    Date: 4/28/2024
+
+    This styles.css is designed for the Melody Rush game to style
+    the menu, the game board, the HUD, popups, and other components
+    of the game. The goal of the styling is to give the game a 
+    techno feel.
+*/
+
+/* Website background */
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+h1, h2, p, select, option, button, footer {
+    font-family: "Orbitron", sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h1, p, select, option, footer, #difficulty-warning, #lose-popup {
+    text-align: center;
+}
+
+p, select, option, button {
+    font-size: 20px;
+}
+
+p, select, option, #menu-view button {
+    text-wrap: wrap;
+}
+
+h1, h2, p, a {
+    color: white;
+}
+
+footer, #instructions, #game-board, #game-view > header, #menu-view section,
+#up-key-row, #down-key-row, #left-key-row, #right-key-row, #difficulty-warning, 
+#lose-popup  {
+    display: flex;
+}
+
+footer, #instructions, #game-board, #difficulty-warning, #lose-popup {
+    flex-direction: column;
+}
+
+#instructions, #game-view > header, #difficulty-warning, #lose-popup {
+    align-items: center;
+}
+
+footer, #menu-view section, #up-key-row, #down-key-row, #left-key-row, #right-key-row  {
+    justify-items: center;
+}
+
+#game-view > header, #menu-view section, #difficulty-warning, #lose-popup {
+    justify-content: space-around;
+}
+
+select, #music-bar, #menu-view button, #difficulty-warning, #lose-popup,
+#lose-popup > img {
+    width: 200px;
+}
+
+#game-view h1, #instructions p, #difficulty-warning > button, #lose-popup > button {
+    max-width: 50%; 
+}
+
+.key-container, #up-key-row, #down-key-row, #left-key-row, #right-key-row,
+#difficulty-warning, #lose-popup {
+    border: solid;
+}
+
+#up-key-row, #down-key-row, #left-key-row, #right-key-row, #difficulty-warning, 
+#lose-popup {
+    border-color: red;
+}
+
+.key-container, #difficulty-warning, #lose-popup {
+    background-color: white;
+    border-width: 15px;
+}
+
+#lose-popup > img, p, footer {
+    margin-top: 50px;
+}
+
+.key-container, #music-bar {
+    position: absolute;
+}
+
+/* Hides specific sections depending on game status. Hides audio to produce 
+   for the purpose of keypress sound effects. */
+audio, .hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#menu-view h1 {
+    margin-top: 125px;
+    margin-bottom: 100px;
+}
+
+#menu-view button {
+    height: 100px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+footer {
+    font-size: 10px;
+}
+
+#game-view h1 {
+    margin-top: 20px;
+    margin: 0;
+}
+
+#game-view button {
+    padding: 0;
+    height: 50px;
+    width: 125px;
+}
+
+#game-board {
+    flex-wrap: wrap;
+}
+
+#up-key-row, #down-key-row, #left-key-row, #right-key-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 190px;
+    border-width: 5px;
+}
+
+.key-container {
+    left: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-color: grey;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+#music-bar {
+    left: 1350px;
+    float: right;
+    height:795px;
+    background-color: lightblue;
+    opacity: 0.3;
+}
+
+#difficulty-warning, #lose-popup {
+    width: 500px;
+    margin-top: 200px;
+    margin-left: 600px
+}
+
+#difficulty-warning > p, #lose-popup > p {
+    color: black;
+}
+
+#difficulty-warning > button, #lose-popup > button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.key-container > img {
+    width: 100px;
+}
+
+.muted {
+    background-color: lightcoral;
+}
