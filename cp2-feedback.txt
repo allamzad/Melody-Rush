@@ -1,0 +1,23 @@
+﻿Allam Amzad
+aamzad@caltech.edu
+May 4, 2024
+CP 2 Feedback
+
+
+Please fill out the following and submit with your CP 2 submission (added to help us know what to focus on when grading):
+
+
+1. What have you learned and applied in CP 2 since CP 1?
+
+
+I’ve learned how to implement interactivity into the HTML websites. Specifically, I’ve learned how to add events, add HTML tags based on user interactions, and update element’s CSS classes/ids. In CP1 I felt that my HTML was more disorganized as well in terms of using the right tags and organization.
+
+
+2. To what extent would you like feedback in CP 2 (e.g. thorough, particular areas of HTML/CSSPlease fill out the following and submit with your CP 2 submission (added to help us know what to focus on when grading):
+
+
+I’d like feedback to primarily focus on the quality of the Javascript code. Also if there are any recommendations on the game layout, gameplay, or any ideas to improve the experience, that would be great too.
+
+
+3. Anything else you would like the grader to know?
+No.
